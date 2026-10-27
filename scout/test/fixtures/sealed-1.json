@@ -1,0 +1,156 @@
+{
+ "valid": [
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Can you grade my answer on the role of the Election Commission?"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Please give me marks for the answer I wrote on monsoon variability"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "I'd like you to evaluate my response to the GS1 question on the Bhakti movement"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "How would an examiner score this answer on urbanisation?"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Review my essay-style answer and tell me what score it deserves"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Rate the answer I just wrote about judicial activism"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Is my answer on the Finance Commission good enough? Give me a score"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Assess my GS4 case study answer"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Judge my answer against the three criteria and give feedback"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Mark this answer out of 15"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Why did I only get 5 for depth of analysis?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Can you justify the score you gave my language?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "What exactly was wrong with my clarity of thought?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Explain how you decided on my marks"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Help me understand the feedback on my analysis"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Where did I lose marks on expression?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "What was the reasoning behind the clarity score?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Break down my result by criterion"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Why was my language rated lower than my clarity?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "I don't understand my evaluation, can you clarify it?"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "How can I make my conclusion stronger?"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "What changes would raise my marks on this answer?"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "Suggest ways to add more depth to my analysis"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "Help me improve the flow and structure of this answer"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "What should I rewrite to sound more precise?"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "Give me advice to polish my language"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "How do I add better examples to this answer?"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "Tell me how to turn this into a higher-scoring answer"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "What is missing from my answer that examiners want?"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "How could this introduction be sharper?"
+  }
+ ],
+ "offtopic": [
+  "What is the syllabus for GS paper 2?",
+  "Who is the current Chief Justice of India?",
+  "Write a 250-word answer on federalism for me",
+  "Draft the full model answer for this question",
+  "Generate an essay on climate change that I can submit",
+  "Give me a reading list for polity",
+  "How many vacancies are there this year?",
+  "Translate my answer into Hindi",
+  "Summarise this chapter of Laxmikanth",
+  "What's the weather in Delhi?",
+  "Recommend a good laptop for studying",
+  "Create a 6-month study schedule",
+  "Tell me a joke about bureaucrats",
+  "Explain the Doctrine of Basic Structure",
+  "What does federalism mean?",
+  "How can I improve my handwriting?",
+  "How do I improve my speed in solving maths?",
+  "Give me tips for time management in the exam hall",
+  "What was the score of yesterday's cricket match?",
+  "Evaluate the economic impact of GST",
+  "Discuss the significance of the Preamble",
+  "Critically analyse the role of the Governor",
+  "Hello, are you there?",
+  "Thanks!",
+  "Can you book a coaching class for me?",
+  "Convert this PDF to Word",
+  "What marks do I need for the cutoff?",
+  "Mark my attendance",
+  "Grade the quality of this restaurant",
+  "Review my resume"
+ ]
+}

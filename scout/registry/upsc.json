@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "note": "Product registry for the UPSC Mains Answer Evaluation Agent. Capabilities are abstract verbs; the FastAPI layer maps them to handlers. GENERAL is the safe fallback: no tools, no model call.",
+  "intents": [
+    {
+      "id": "GENERAL",
+      "category": "general",
+      "description": "Safe fallback for greetings, small talk and any request this agent does not support. Never routes to tools or a model; explains what the agent can do.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      },
+      "capabilities": [],
+      "riskClass": "low",
+      "surfaces": [
+        "chat",
+        "api"
+      ],
+      "roles": [
+        "*"
+      ],
+      "examples": [
+        "hello",
+        "hi there",
+        "what can you do?",
+        "who are you?",
+        "tell me a joke",
+        "what is the weather today?",
+        "what is the capital of France?",
+        "write the full essay for me",
+        "predict the prelims cut-off",
+        "write a 300-word answer on federalism for me",
+        "draft the model answer for this question",
+        "generate an essay I can submit",
+        "give me a reading list",
+        "what is the syllabus?",
+        "how many vacancies are there this year?",
+        "create a study schedule",
+        "tips for time management in the exam",
+        "what is the cut-off?",
+        "translate this into Hindi",
+        "summarise this chapter",
+        "recommend a laptop",
+        "who is the chief justice?",
+        "explain the doctrine of basic structure",
+        "what does federalism mean?",
+        "how can I improve my handwriting?",
+        "evaluate the economic impact of GST",
+        "discuss the significance of the preamble",
+        "critically analyse the role of the governor",
+        "review my resume",
+        "grade this restaurant",
+        "mark my attendance",
+        "what was the cricket score?",
+        "thanks",
+        "are you there?",
+        "convert this PDF to Word",
+        "book a coaching class"
+      ],
+      "version": 1
+    },
+    {
+      "id": "upsc.evaluate",
+      "category": "upsc",
+      "description": "Evaluate a UPSC Mains answer against clarity of thought, depth of analysis and language and expression, returning criterion-wise scores, evidence-based feedback and suggestions.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      },
+      "capabilities": [
+        "rubric.load",
+        "llm.evaluate"
+      ],
+      "riskClass": "low",
+      "surfaces": [
+        "chat",
+        "api"
+      ],
+      "roles": [
+        "*"
+      ],
+      "examples": [
+        "evaluate my UPSC Mains answer",
+        "score this answer out of 10",
+        "please grade my GS2 answer on federalism",
+        "review my answer and give marks",
+        "assess my answer to this question",
+        "check my Mains answer",
+        "mark my answer",
+        "how many marks will this answer get?",
+        "rate my answer and give feedback",
+        "assess the quality of my response",
+        "evaluate this response against the rubric",
+        "I want feedback and a score on my answer",
+        "grade my answer",
+        "rate my answer out of 10",
+        "judge the quality of my answer",
+        "mark this answer out of 20 marks",
+        "review my answer and tell me the score it deserves",
+        "how would an examiner score my answer?",
+        "is my answer good enough? give me a score",
+        "give me marks for my answer on this topic",
+        "assess my GS3 essay answer",
+        "evaluate my response to this question",
+        "score my answer against the three criteria",
+        "give feedback and marks on what I wrote",
+        "what score does my answer deserve?",
+        "check my answer and rate it",
+        "examine my response and grade it"
+      ],
+      "version": 1,
+      "anchors": [
+        "answer",
+        "response",
+        "essay",
+        "write-up",
+        "evaluation",
+        "score",
+        "marks",
+        "analysis",
+        "clarity",
+        "expression",
+        "introduction",
+        "conclusion",
+        "argument",
+        "criteria",
+        "criterion",
+        "rubric",
+        "examiner",
+        "result"
+      ]
+    },
+    {
+      "id": "upsc.explain",
+      "category": "upsc",
+      "description": "Explain an earlier evaluation: why a criterion received its score and which evidence in the answer supports it.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "evaluationId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "evaluationId"
+        ]
+      },
+      "capabilities": [
+        "evaluation.recall",
+        "llm.explain"
+      ],
+      "riskClass": "low",
+      "surfaces": [
+        "chat",
+        "api"
+      ],
+      "roles": [
+        "*"
+      ],
+      "examples": [
+        "why did I get this score?",
+        "explain my evaluation",
+        "explain why clarity of thought scored low",
+        "what does depth of analysis mean in my feedback?",
+        "break down how my marks were calculated",
+        "why is my score low?",
+        "how did you arrive at this mark?",
+        "what is the reason for the low score?",
+        "explain the feedback you gave",
+        "justify the marks you awarded",
+        "justify the marks you gave me",
+        "what was the reasoning behind my analysis score?",
+        "where did I lose marks?",
+        "help me understand the feedback on my answer",
+        "explain how you decided my score",
+        "why was my expression rated lower than my analysis?",
+        "I don't understand my result, please clarify",
+        "break down my marks by criterion",
+        "what exactly was wrong with my analysis?",
+        "why did I only get 4 out of 10?",
+        "walk me through the reasons behind my evaluation",
+        "what made my clarity score lower?",
+        "how was my depth of analysis judged?"
+      ],
+      "version": 1,
+      "anchors": [
+        "answer",
+        "response",
+        "essay",
+        "write-up",
+        "evaluation",
+        "score",
+        "marks",
+        "analysis",
+        "clarity",
+        "expression",
+        "introduction",
+        "conclusion",
+        "argument",
+        "criteria",
+        "criterion",
+        "rubric",
+        "examiner",
+        "result"
+      ]
+    },
+    {
+      "id": "upsc.improve",
+      "category": "upsc",
+      "description": "Suggest concrete improvements to an evaluated answer: what to add, restructure or rephrase to score higher.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "evaluationId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "evaluationId"
+        ]
+      },
+      "capabilities": [
+        "evaluation.recall",
+        "llm.improve"
+      ],
+      "riskClass": "low",
+      "surfaces": [
+        "chat",
+        "api"
+      ],
+      "roles": [
+        "*"
+      ],
+      "examples": [
+        "how can I improve this answer?",
+        "suggest improvements for my answer",
+        "what should I add to get better marks?",
+        "how do I make my answer more analytical?",
+        "give me tips to improve my language and expression",
+        "how do I make this answer better?",
+        "what can I do to strengthen my answer?",
+        "give me tips to improve my conclusion",
+        "how can I enhance the structure?",
+        "what should I change to score more?",
+        "what changes would raise my marks?",
+        "suggest ways to add depth to my analysis",
+        "help me improve the structure and flow",
+        "what should I rewrite to sound more precise?",
+        "give me advice to polish my language",
+        "how do I add better examples?",
+        "how can I turn this into a higher-scoring answer?",
+        "what is missing that examiners expect?",
+        "how could my introduction be sharper?",
+        "make my conclusion stronger",
+        "how do I raise my score on analysis?",
+        "which parts should I rephrase for better expression?",
+        "what do examiners reward that my answer lacks?"
+      ],
+      "version": 1,
+      "anchors": [
+        "answer",
+        "response",
+        "essay",
+        "write-up",
+        "evaluation",
+        "score",
+        "marks",
+        "analysis",
+        "clarity",
+        "expression",
+        "introduction",
+        "conclusion",
+        "argument",
+        "criteria",
+        "criterion",
+        "rubric",
+        "examiner",
+        "result"
+      ]
+    },
+    {
+      "id": "upsc.history",
+      "category": "upsc",
+      "description": "Show the student's saved evaluation history and score progress across their previous evaluations.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      },
+      "capabilities": [
+        "history.recall"
+      ],
+      "riskClass": "low",
+      "surfaces": [
+        "chat",
+        "api"
+      ],
+      "roles": [
+        "*"
+      ],
+      "anchors": [
+        "evaluation",
+        "evaluations",
+        "answer",
+        "answers",
+        "score",
+        "scores",
+        "marks",
+        "mains",
+        "upsc"
+      ],
+      "examples": [
+        "show my evaluation history",
+        "show my history",
+        "how am I progressing across evaluations?",
+        "what is my progress so far?",
+        "track my progress over time",
+        "am I improving over time?",
+        "show my previous evaluations",
+        "show my past evaluations",
+        "list my earlier evaluations",
+        "how have I progressed since my first evaluation?",
+        "show my progress trend",
+        "show my evaluation progress",
+        "how are my marks progressing over time?"
+      ],
+      "version": 1
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+ "valid": [
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Could you give a score to the answer I drafted on tribal welfare schemes?"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Please look over my answer on FDI policy and tell me how many marks it merits"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "I wrote about the Western Ghats, can you rate it?"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Score my answer to question 7 on the three parameters"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Tell me how my Mains response on cyclones stands in terms of marks"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Why was my depth of analysis marked down?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Could you tell me why clarity got a lower mark than language?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "I'm confused about the evaluation you gave, what did you base the scores on?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Which sentences led to the reduction in my marks?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Explain the evidence behind each criterion score"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "What can I do differently to get a better score?"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "Show me how to make my analysis deeper"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "Any pointers to tighten the language in my answer?"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "How do I restructure this so the argument is clearer?"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "What would a top-scoring version of this include?"
+  }
+ ],
+ "offtopic": [
+  "List the important dams in India",
+  "Compose a 150-word note on Article 21 that I can paste into my exam",
+  "Who won the last general election?",
+  "Review the latest smartphone launch",
+  "Rate this movie for me",
+  "Explain how photosynthesis works",
+  "How can I improve my sleep schedule?",
+  "Suggest improvements to my gym routine",
+  "Give feedback on my cover letter",
+  "Mark the points on this map",
+  "What is the exam date for Mains?",
+  "Plan my revision for the next two months",
+  "Grade my child's school project",
+  "Assess the risk of investing in gold",
+  "Write the introduction and conclusion for an essay on ethics",
+  "Tell me about yourself",
+  "Calculate 15% of 2400",
+  "Why is the sky blue?",
+  "How do I score well in the interview round?",
+  "Help me prepare answer-writing practice questions"
+ ]
+}

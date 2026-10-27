@@ -1,0 +1,23 @@
+{
+  "name": "scout-intent-upsc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Scout Intent engine (Meterless spec) for the UPSC Mains evaluation agent",
+  "scripts": {
+    "evals": "node scripts/run-evals.mjs all",
+    "evals:intent": "node scripts/run-evals.mjs intent",
+    "evals:injection": "node scripts/run-evals.mjs injection",
+    "evals:multi-intent": "node scripts/run-evals.mjs multi-intent",
+    "evals:report": "node scripts/run-evals.mjs all --report",
+    "test": "tsx --test \"test/*.test.ts\"",
+    "serve": "node --import tsx src/server.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "yaml": "^2.5.0"
+  },
+  "engines": {
+    "node": ">=18.19"
+  }
+}

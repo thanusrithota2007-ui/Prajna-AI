@@ -1,0 +1,86 @@
+{
+ "valid": [
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "I've finished my answer on food security; kindly tell me what it would score"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Could you put marks on my write-up about the Himalayan glaciers?"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Where does my answer on corruption stand if graded out of 10?"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Please appraise my answer on the Kyoto protocol and award a score"
+  },
+  {
+   "intent": "upsc.evaluate",
+   "prompt": "Run my answer through the rubric and show me the numbers"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "What led to the mark you gave my analysis criterion?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Tell me why my expression got a middling score"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "How did you come up with the figure for clarity?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "Can you point to the parts of my answer that cost me marks?"
+  },
+  {
+   "intent": "upsc.explain",
+   "prompt": "I would like a reasoned account of my scores"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "Give me concrete steps to lift this answer's marks"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "How can the argument in my answer be made more convincing?"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "Suggest edits so my sentences read more crisply"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "What additional dimensions should I cover to deepen this?"
+  },
+  {
+   "intent": "upsc.improve",
+   "prompt": "Rework advice please: how do I get the conclusion to land better?"
+  }
+ ],
+ "offtopic": [
+  "Write an essay on women empowerment for submission tomorrow",
+  "What's the difference between a Governor and a Chief Minister?",
+  "Summarize the key provisions of the RTI Act",
+  "Show me last year's cut-off marks",
+  "How should I divide my time between GS papers?",
+  "Give me ten mock questions on ethics",
+  "Rate my chances of clearing the exam",
+  "Check my spelling in this email",
+  "Score the best answer among these four options",
+  "Explain what a bill is in Parliament",
+  "Translate this paragraph into Tamil",
+  "Can you recommend a good newspaper for current affairs?",
+  "Improve my LinkedIn headline",
+  "What is 18 multiplied by 42?",
+  "Grade the pizza from yesterday",
+  "Evaluate the pros and cons of nuclear energy",
+  "Suggest a name for my study group",
+  "Why did the rupee fall this week?",
+  "How do I explain a gap year in my CV?",
+  "Mark these dates on my calendar"
+ ]
+}

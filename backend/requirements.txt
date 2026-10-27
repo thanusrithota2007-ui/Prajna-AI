@@ -1,0 +1,25 @@
+# Milestone 1 — JDBC + health only.
+# LangGraph remains deferred; model providers support the UPSC agent.
+
+# --- web framework ---
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+
+# --- validation / settings ---
+pydantic==2.11.4
+pydantic-settings==2.9.1
+
+# --- jdbc ---
+JayDeBeApi==1.2.3
+JPype1==1.5.2       # Python 3.13 compatible; 3.14 is NOT supported yet
+
+# --- testing ---
+pytest==8.3.5
+pytest-asyncio==0.24.0
+httpx==0.28.1       # runtime (Scout + Nightshift clients) and TestClient
+openai==3.37.0      # NVIDIA OpenAI-compatible API client
+
+# --- deferred (do not install yet) ---
+# langgraph
+# langchain-core
+# anthropic SDK

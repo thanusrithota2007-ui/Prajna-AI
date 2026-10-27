@@ -1,0 +1,301 @@
+.workspace {
+  background: var(--bg);
+}
+
+.demo-banner {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: -14px 0 24px;
+  padding: 11px 16px;
+  background: var(--saffron-tint);
+  border-left: 3px solid var(--saffron);
+  border-radius: 0 8px 8px 0;
+  color: #5c3200;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.demo-banner svg {
+  flex: none;
+  margin-top: 2px;
+  color: var(--saffron-deep);
+}
+
+/* The workspace is one sheet, not a stack of cards */
+.ws-card {
+  background: var(--paper);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 40px 40px 32px;
+}
+
+.ws-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-areas:
+    'question settings'
+    'answer   settings'
+    'actions  actions';
+  column-gap: 44px;
+  row-gap: 28px;
+}
+.ws-question {
+  grid-area: question;
+}
+.ws-answer {
+  grid-area: answer;
+}
+.ws-actions {
+  grid-area: actions;
+}
+
+/* Setup column: quiet ivory panel, separated by a rule instead of a box */
+.ws-settings {
+  grid-area: settings;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 0 0 36px;
+  border-left: 1px solid var(--border);
+}
+.ws-settings::before {
+  content: 'About this answer';
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Labels as step headings: question and answer are the two main tasks */
+.ws-question .field-label,
+.ws-answer .field-label {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.ws-question textarea {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+fieldset.field {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+fieldset.field legend {
+  padding: 0;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+fieldset:disabled {
+  opacity: 0.7;
+}
+
+.custom-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+.custom-input .input {
+  max-width: 140px;
+}
+.unit {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* The writing surface: roomy, serif, ruled like exercise paper */
+.answer-input {
+  min-height: 420px;
+  padding: 10px 20px 10px 22px;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 32px;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(90deg, transparent 0 11px, rgba(255, 153, 51, 0.5) 11px 12px, transparent 12px),
+    repeating-linear-gradient(to bottom, transparent 0 31px, var(--rule) 31px 32px);
+  background-attachment: local;
+  border-radius: 10px;
+}
+.answer-input::placeholder {
+  font-style: italic;
+}
+
+/* ---------- Word-limit meter ---------- */
+
+.meter {
+  margin-top: 6px;
+}
+.meter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  margin-bottom: 8px;
+}
+.meter-count strong {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.meter-limit {
+  color: var(--text-secondary);
+}
+.meter-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.meter-track {
+  position: relative;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.meter-fill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 999px;
+  transition:
+    width 0.25s var(--ease),
+    background-color 0.25s var(--ease);
+}
+.meter-near .meter-fill {
+  background: var(--saffron);
+}
+.meter-near .meter-text {
+  color: var(--saffron-deep);
+}
+.meter-over .meter-fill {
+  background: var(--saffron-deep);
+  /* diagonal stripes so "over" is distinguishable without colour */
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.35) 0 4px, transparent 4px 8px);
+}
+.meter-over .meter-text {
+  color: var(--saffron-deep);
+  font-weight: 600;
+}
+
+/* ---------- Actions ---------- */
+
+.ws-actions {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--text);
+}
+
+.clear-area {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+.confirm {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+.confirm > span {
+  margin-right: 4px;
+  font-weight: 500;
+}
+.btn-danger {
+  background: var(--danger);
+  color: var(--white);
+}
+.btn-danger:hover:not(:disabled) {
+  background: #8f1c12;
+}
+
+.submit-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.btn-lg {
+  min-height: 54px;
+  padding: 0 32px;
+  font-size: 1rem;
+  min-width: 232px;
+}
+.submit-error {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: var(--danger);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+@media (max-width: 960px) {
+  .ws-card {
+    padding: 32px 28px 28px;
+  }
+  .ws-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'question'
+      'settings'
+      'answer'
+      'actions';
+  }
+  .ws-settings {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 28px;
+    padding: 22px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+  .ws-settings::before {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .ws-card {
+    padding: 22px 16px 20px;
+    border-radius: var(--radius);
+  }
+  .ws-settings {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .answer-input {
+    min-height: 320px;
+    font-size: 1.08rem;
+  }
+  .ws-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+  .submit-area {
+    align-items: stretch;
+  }
+  .btn-lg {
+    width: 100%;
+  }
+  .clear-area {
+    justify-content: center;
+  }
+}
